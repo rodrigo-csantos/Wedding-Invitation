@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style-convite.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Convite de casamento</title>
+</head>
+<body>
+  <div class="weddingCard">
+      <div class="cardFront">
+        <div class="img">
+          <img src="./assets/images/rodrigo_karina-brasao.png" alt="Brasão Rodrigo e Karina">
+        </div>
+      </div>  
+      <div class="cardInside">
+        <div class="inside-text">
+          <p class="verse">“<em>E, acima de tudo, tenham amor, pois o amor une perfeitamente todas as coisas.</em>” - Cl. 3:14</p> 
+          <h1>Karina e Rodrigo</h1>
+          <p class="textInvite">Convidam para a celebração do seu casamento a ser realizada em</p>
+        </div>
+        <div class="dataHorario">
+          <div id="dateweek">
+            <P>SEXTA</P>
+          </div>
+          <div class="separador" id="s1"></div>
+          <div class="dateInvite">
+            <div class="dateMes">SET</div>
+            <div class="dateDia">13</div>
+            <div class="dateAno">2024</div>
+          </div>
+          <div class="separador" id="s2"></div>
+          <div id="dateHour">
+            <p>19H00 </p>
+          </div>
+        </div>
+        <div class="place">
+          <p>Local: Restaurante Di Liana</p>
+        </div>
+      </div>   
+  </div>
+  <div class="button">
+    <button id="botao" class="click" onclick="toogleMode()">Open</button>
+  </div>
+  <div id="button-links">
+    <div class="img-back">
+      <a href="#maps">
+        <img class="imgBk" src="./assets/images/2-removebk.png" alt="texto">
+        <img class="imgLinks" src="./assets/images/icone-local.png" alt="ícone de localização">
+      </a>
+    </div>
+    <div class="img-back">
+      <a href="https://wa.me/5571993232877?text=Eu%20confirmo%20presença%20no%20evento%20do%20ano!" target="_blank">
+        <img class="imgBk" src="./assets/images/1-removebk.png" alt="texto">
+        <img class="imgLinks" src="./assets/images/icone-whats.png" alt="ícone do whatsapp"></a>
+    </div>
+    <div class="img-back">
+      <a href="http://localhost:3000/gift">
+        <img class="imgBk" src="./assets/images/3-removebk.png" alt="texto">
+        <img class="imgLinks" src="./assets/images/icone-presente.png" alt="ícone de presentes">
+      </a>
+    </div>
+  </div>
+  <div class="container">
+      <h2>Falta pouco para o grande dia...</h2>
+      <section id="countdow-container">
+      <div class="countdow days-c">
+        <p class="text" id="days">0</p>
+        <span>Dias</span>
+      </div>
+      <div class="countdow hours-c">
+        <p class="text" id="hours">0</p>
+        <span>Horas</span>
+      </div>
+      <div class="countdow min-c">
+        <p class="text" id="min">0</p>
+        <span>Minutos</span>
+      </div>
+      <div class="countdow secs-c">
+        <p class="text" id="secs">0</p>
+        <span>Segundos</span>
+      </div>
+    </section>
+  </div>
+  <div class="mapsContainer">
+    <div class="address">
+      <h3 id="textocopy">
+        Restaurante Di Liana <br>
+        R. Macapá, 314 - Ondina, Salvador - BA, 40170-150
+      </h3>
+      <button class="buttonCopy" onclick="copiarTexto()" title="Copiar"></button>
+    </div>
+    <div id="maps" class="mapBox">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4326328240613!2d-38.51061262483964!3d-13.008098760544415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x716036723ad21f1%3A0xb389268f6893f751!2sRestaurante%20Di%20Liana!5e0!3m2!1spt-BR!2sbr!4v1705611737770!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <script src="./assets/JS/global-script.js"></script>
+</body>
+</html>
