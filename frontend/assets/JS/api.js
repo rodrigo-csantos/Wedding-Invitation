@@ -14,10 +14,10 @@ export const getGifts = async () => {
     }
 };
 
-export const selectGift = async (id) => {
+export const selectGift = async (id, guestName) => {
     try {
         const requestBody = {
-            giftGiver: "Rodrigo"
+            giftGiver: guestName
         }
 
         const response = await fetch(`${baseURL}/select/${id}`, { 
