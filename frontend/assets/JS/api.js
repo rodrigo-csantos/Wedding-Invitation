@@ -1,20 +1,39 @@
-const axios = require('axios')
-const api = axios.create({
-    baseURL: 'http://localhost:3001/'
-})
+const baseURL = 'http://localhost:3001';
 
-const getGifts = async () => {
-    const gifts = await api.get('/gifts')
-    return gifts.data
-}
+export const getGifts = async () => {
+    try {
+        const response = await fetch(`${baseURL}/gifts`);
+        if (!response.ok) {
+            throw new Error('Erro ao obter presentes');
+        }
+        const gifts = await response.json();
+        return gifts;
+    } catch (error) {
+        console.error('Erro ao obter presentes:', error);
+        return [];
+    }
+};
 
-const selectGift = async () => {
-    const selectedGift = await api.post('/:id/select')
-    return selectedGift.data
-}
+export const selectGift = async (id) => {
+    try {
+        const requestBody = {
+            giftGiver: "Rodrigo"
+        }
 
-module.exports = {
-    getGifts,
-    selectGift,
-    api
+        const response = await fetch(`${baseURL}/select/${id}`, { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody) 
+        })
+        if (!response.ok) {
+            throw new Error('Erro ao selecionar presente');
+        }
+        const selectedGift = await response.json();
+        return selectedGift;
+    } catch (error) {
+        console.error('Erro ao selecionar presente:', error);
+        return null;
+    }
 }

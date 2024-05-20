@@ -25,9 +25,15 @@ p {
     text-align: center;
 }
 
-li {
-    cursor: pointer;
+.selected-gift {
+    color: #A9A9A9; 
+    text-decoration: line-through; 
 }
+  
+
+/* li {
+    cursor: pointer;
+} */
 
 @media screen and (min-width: 300px) and (max-width: 720px) {
     body {

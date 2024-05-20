@@ -11,8 +11,9 @@ exports.findAll = async (_req, res)=> {
 }
 
 exports.updateSelectedGift = async (req, res)=> {
+    const {id} = req.params
     try {
-        const updatedGift = await serviceGiftList.updateSelectedGift(req.params.id, req.body.giftGiver)
+        const updatedGift = await serviceGiftList.updateSelectedGift(id, req.body.giftGiver)
         if (!updatedGift) {
             return res.status(404).json({message: 'gift not found'})
         }

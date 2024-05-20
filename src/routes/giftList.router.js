@@ -4,6 +4,6 @@ const controllerGiftList = require('../controllers/giftList.controller')
 
 router.get('/gifts', controllerGiftList.findAll)
 
-router.post('/:id/select', controllerGiftList.updateSelectedGift)
+router.post('/select/:id', controllerGiftList.updateSelectedGift)
 
 module.exports = router

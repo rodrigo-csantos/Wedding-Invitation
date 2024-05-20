@@ -1,15 +1,15 @@
-const daysEL = document.getElementById('days')
-const hoursEL = document.getElementById('hours')
-const minEL = document.getElementById('min')
-const secsEL = document.getElementById('secs')
 const html = document.documentElement
-const wedding = '2024-09-13'
 
 function formatTime(time) {
     return time < 10 ? `0${time}` : time
 }
 
 function countdow () {
+    const daysEL = document.getElementById('days')
+    const hoursEL = document.getElementById('hours')
+    const minEL = document.getElementById('min')
+    const secsEL = document.getElementById('secs')
+    const wedding = '2024-09-13'
     const weddingDate = new Date(wedding)
     const currentDate = new Date()
     const totalSeconds = (weddingDate - currentDate) / 1000
@@ -24,7 +24,6 @@ function countdow () {
     minEL.innerHTML = formatTime(mins)
     secsEL.innerHTML = formatTime(seconds)
 }
-
 countdow()
 setInterval(countdow, 1000)
 
