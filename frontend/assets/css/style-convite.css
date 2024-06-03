@@ -16,7 +16,7 @@ html {
   --transformCardFront: none;
   --displayImg: flex;
   --heightCardFront: 400px;
-  --heightCardFront2: 260px;
+  --heightCardFront2: 232px;
   --boxShadow: none;
   --buttonMarginTop: 50px;
   --displayCountdown: none;
@@ -28,12 +28,12 @@ html {
   --transformCardFront: rotateX(160deg);
   --displayImg: none;
   --heightCardFront: 350px;
-  --heightCardFront2: 220px;
+  --heightCardFront2: 225px;
   --boxShadow: inset 20px 10px 90px rgba(0,0,0,.15), 0 10px 90px rgba(0,0,0,0.3);
   --buttonMarginTop: 100px;
   --displayCountdown: flex;
   --heightBody: 280vh;
-  --heightBody2: 180vh;
+  --heightBody2: 200vh;
 }
 
 body {
@@ -275,6 +275,7 @@ h2 {
   display: var(--displayCountdown);
   text-align: center;
   justify-content: center;
+  font-family: 'Garet';
 }
 
 .container {
@@ -357,6 +358,10 @@ h2 {
   border-radius: 5px;
 }
 
+#textocopy {
+  font-family: 'Garet';
+}
+
 @media screen and (min-width: 300px) and (max-width: 720px) {
   
   body {
@@ -367,7 +372,7 @@ h2 {
 
   .weddingCard {
     width: 360px;
-    height: 260px;
+    height: 232px;
   }
 
   .cardFront {
@@ -378,7 +383,7 @@ h2 {
 
   .cardInside {
     width: 360px;
-    height:260px;
+    height:232px;
     background-size: 100% 100%;
   }
 
@@ -389,19 +394,20 @@ h2 {
   }
 
   p.verse {
-    width: 380px;
-    top: 13px;
+    width: 240px;
+    top: 15px;
     font-size: 10px;
   }
 
   h1 {
-    top: 26px;
+    top: 22px;
     font-size: 45px;
   }
 
   .textInvite {
-    top: 24px;
-    font-size: 9px;
+    width: 320px;
+    top: 25px;
+    font-size: 9.2px;
     text-align: center;
   }
 
@@ -411,16 +417,16 @@ h2 {
 
   #dateweek {
     margin-right: 12px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   #dateHour {
     margin-left: 12px;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .separador {
-    height: 31px;
+    height: 27px;
   }
 
   #s1 {
@@ -432,22 +438,22 @@ h2 {
   }
 
   .dateMes {
-    font-size: 0.92rem;
+    font-size: 0.75rem;
     bottom: -6px;
   }
 
   .dateDia {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .dateAno {
-    font-size: 0.92rem;
+    font-size: 0.75rem;
     top: -5px;
   }
 
   .place {
-    top: 2px;
-    font-size: 0.68rem;
+    top: 8px;
+    font-size: 0.57rem;
   }
 
   .text {
@@ -487,7 +493,7 @@ h2 {
   }
 
   .address {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .h3 {
