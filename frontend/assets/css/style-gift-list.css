@@ -45,6 +45,7 @@ h1 {
 .selected-gift {
     color: #A9A9A9; 
     text-decoration: line-through; 
+    margin-bottom: 10px;
 }
 
 dialog::backdrop{
@@ -111,9 +112,9 @@ ul {
 }
 
 li {
-    width: 550px;
+    width: 480px;
     font-family: 'Garet';
-    margin: 10px 0;
+    margin: 10px 3px;
     padding: 5px 2px;
     list-style: none;
     display: flex;

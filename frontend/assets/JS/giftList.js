@@ -11,18 +11,16 @@ async function renderGiftList () {
         const img = document.createElement('img')
         const src = `./assets/images/giftsImages/${gift.idImage}.webp`
         img.src = src
-        img.alt = gift.giftName
         img.classList.add('gift-image')
         listItem.appendChild(img)
 
-        const textNode = document.createTextNode(gift.giftName)
-        listItem.appendChild(textNode)
-
-        // listItem.textContent = gift.giftName
+        const textNode = document.createElement('span');
+        textNode.textContent = gift.giftName;
+        listItem.appendChild(textNode);
 
         if (gift.selected) {
-            listItem.textContent += ' - Item já selecionado'
-            listItem.classList.add('selected-gift')
+            textNode.textContent += ' - Item já selecionado'
+            textNode.classList.add('selected-gift')
         } else {
             const button = document.createElement('button')
             button.classList.add('select');
@@ -31,13 +29,6 @@ async function renderGiftList () {
             
             const dialog = document.createElement('dialog')
             dialog.classList.add('gift-dialog')
-
-            // const img2 = document.createElement('img')
-            // const src2 = `./assets/images/giftsImages/${gift.idImage}.webp`
-            // img2.src = src2
-            // img.alt = gift.giftName
-            // img2.classList.add('gift-image2')
-            // dialog.appendChild(img2)
 
             const input = document.createElement('input')
             input.classList.add('gift-input')
