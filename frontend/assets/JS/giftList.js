@@ -9,7 +9,7 @@ async function renderGiftList () {
         const listItem = document.createElement('li')
         
         const img = document.createElement('img')
-        const src = `./assets/images/giftsImages/${gift.idImage}.webp`
+        const src = `./assets/images/giftsImages/${gift.idImage}.jpg`
         img.src = src
         img.classList.add('gift-image')
         listItem.appendChild(img)
